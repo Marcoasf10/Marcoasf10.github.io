@@ -109,12 +109,17 @@ h1 {
     width: 10%;
 }
 
-
 .profile_img{
     border-radius: 50%;
     height: 200px;
     width: 200px;
     object-fit: cover;
+}
+.project_icon{
+    max-width: 100%;
+    height: auto;
+    min-width: 100px;
+    min-height: 100px; 
 }
 
 .project-container{
