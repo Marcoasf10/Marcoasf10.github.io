@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,34 +8,39 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="menu-icon">
-            <span></span>
-        </div>
-    </nav>
-    <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </div>
+    <div id="menu-placeholder"></div>
     <div class="content">
         <div class="container-fluid p-5 text-white">
-            <h1>Marcoasf10</h1>
-            <!-- <img src="face.png" alt="Profile Photo"> !-->
-            <p>I am a Computer Science graduate with hands-on experience in full-stack software and web development. 
+            <div class="header">
+                <h1>Marcoasf10</h1>
+                <img class="profile_img" src="face.png" alt="Profile Photo">
+            </div>
+            <p>
+                I am a Computer Science graduate with hands-on experience in full-stack software and web development. 
                 As a passionate about technology, I actively seek out tech-talks to stay updated on the latest industry developments 
-                reflecting my commitment to continuous learning. I am motivated and excited about the working journey that awaits me.</p>
+                reflecting my commitment to continuous learning. I am motivated and excited about the working journey that awaits me.
+            </p>
         </div>
     </div>
     <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const menu = document.querySelector('.menu');
-        const content = document.querySelector('.content');
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-placeholder').innerHTML = data;
+                    const menuIcon = document.querySelector('.menu-icon');
+                    const menu = document.querySelector('.menu');
+                    const content = document.querySelector('.content');
 
-        menuIcon.addEventListener('click', () => {
-            const isMenuVisible = menu.style.display === 'block';
-            menu.style.display = isMenuVisible ? 'none' : 'block';
-            content.style.marginTop = isMenuVisible ? '0' : `${menu.offsetHeight}px`;
+                    if (menuIcon && menu && content) {
+                        menuIcon.addEventListener('click', () => {
+                            const isMenuVisible = menu.style.display === 'block';
+                            menu.style.display = isMenuVisible ? 'none' : 'block';
+                            content.style.marginTop = isMenuVisible ? '0' : `${menu.offsetHeight}px`;
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching menu:', error));
         });
     </script>
 </body>
