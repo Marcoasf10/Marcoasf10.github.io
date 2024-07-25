@@ -2,14 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <nav class="menu-icon">
-        <span></span>
+    <nav class="navbar">
+        <div class="menu-icon">
+            <span></span>
+        </div>
     </nav>
-    <h1>Marcoasf10</h1>
-    <p>I am ...</p>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <div class="container-fluid p-5 text-white">
+            <h1>Marcoasf10</h1>
+            <!-- <img src="face.png" alt="Profile Photo"> !-->
+            <p>I am a Computer Science graduate with hands-on experience in full-stack software and web development. 
+                As a passionate about technology, I actively seek out tech-talks to stay updated on the latest industry developments 
+                reflecting my commitment to continuous learning. I am motivated and excited about the working journey that awaits me.</p>
+        </div>
+    </div>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const menu = document.querySelector('.menu');
+        const content = document.querySelector('.content');
+
+        menuIcon.addEventListener('click', () => {
+            const isMenuVisible = menu.style.display === 'block';
+            menu.style.display = isMenuVisible ? 'none' : 'block';
+            content.style.marginTop = isMenuVisible ? '0' : `${menu.offsetHeight}px`;
+        });
+    </script>
 </body>
 </html>
