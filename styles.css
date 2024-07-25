@@ -24,6 +24,18 @@ body {
     cursor: pointer;
 }
 
+.lang-select div {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lang-select .active {
+    background-color: #303030;
+    color: #ffffff;
+}
+
 .menu-icon {
     width: 30px;
     height: 22px;
@@ -88,9 +100,37 @@ h1 {
     align-items: center;
 }
 
+.header-projects {
+    display: flex;
+    align-items: center;
+}
+
+.header-projects img {
+    width: 10%;
+}
+
+
 .profile_img{
     border-radius: 50%;
     height: 200px;
     width: 200px;
     object-fit: cover;
+}
+
+.project-container{
+    background-color: #303030;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.project-container p {
+    padding-top: 5%;
+    font-size: 75%;
+}
+
+.project-img{
+    max-width: 100%; 
+    height: auto;   
+    border-radius: 5px;
+    padding: 5%;
 }
