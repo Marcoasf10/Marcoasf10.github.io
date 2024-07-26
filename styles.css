@@ -133,9 +133,11 @@ h1 {
     font-size: 75%;
 }
 
-.project-img{
-    max-width: 100%; 
-    height: auto;   
-    border-radius: 5px;
+.project-img {
+    max-width: 100%;
+    max-height: 220px;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
     padding: 5%;
 }
