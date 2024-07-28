@@ -116,19 +116,23 @@ h1 {
 
 .profile_img{
     border-radius: 50%;
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 250px;
+    max-width: 250px;
     object-fit: cover;
 }
 
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
     .profile_img {
-        max-height: 150px;
-        max-width: 150px;
+        margin-top: 20px; /* Add space between the heading and the image */
     }
 
     h1 {
-        font-size: 1.5rem;
+        margin-right: 0; /* Remove the right margin */
     }
 }
 
