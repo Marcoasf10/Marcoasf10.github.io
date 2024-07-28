@@ -35,7 +35,7 @@
                     menuIcon.addEventListener('click', () => {
                         const isMenuVisible = menu.style.display === 'block';
                         menu.style.display = isMenuVisible ? 'none' : 'block';
-                        content.style.marginTop = isMenuVisible ? '0' : `${menu.offsetHeight}px`;
+                        content.style.marginTop = isMenuVisible ? '40px' : `${menu.offsetHeight+40}px`;
                     });
                 }
 

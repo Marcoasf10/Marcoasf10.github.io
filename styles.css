@@ -7,15 +7,17 @@ body {
 
 .navbar {
     background-color: #191919;
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 40px; /* Ajuste a altura conforme necessário */
+    height: 40px; /* Adjust height as needed */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaça os elementos entre as extremidades */
-    padding: 0 10px; /* Ajuste o padding conforme necessário */
+    justify-content: space-between; /* Space elements between edges */
+    padding: 0 10px; /* Adjust padding as needed */
     box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efeito de sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    z-index: 1000;
 }
 
 .lang-select {
@@ -62,11 +64,12 @@ body {
 
 .menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 40px; 
     background: #191919;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
 }
 
 .menu a {
@@ -83,6 +86,7 @@ body {
 }
 
 .content {
+    margin-top: 40px;
     transition: margin-top 0.3s ease;
     background-color: #232323;
 }
@@ -115,6 +119,7 @@ h1 {
     max-width: 200px;
     object-fit: cover;
 }
+
 .project_icon{
     max-width: 100%;
     height: auto;
@@ -143,7 +148,7 @@ h1 {
 
 .project-img {
     max-width: 100%;
-    max-height: 220px;
+    max-height: 250px;
     width: auto;
     height: auto;
     border-radius: 25px;
@@ -164,4 +169,75 @@ h1 {
     .project-img {
         border-radius: 15px;
     }
+}
+
+.contact-container {
+    background-color: #232323;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 60px; /* To offset the fixed navbar */
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #303030;
+    color: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #878686;
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form button {
+    background-color: #191919;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #303030;
+}
+
+.link-contacts{
+    color:white;
+    text-decoration: none;
+}
+
+.link-contacts:hover {
+    color: #878686;
+    text-decoration: none;
 }
