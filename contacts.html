@@ -64,13 +64,13 @@
                 .catch(error => console.error('Error loading content:', error));
         });
 
-        function sendEmail() {
+        function sendEmail(subject) {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
             const emailBody = `Name: ${encodeURIComponent(name)}%0A%0A${encodeURIComponent(message)}`;
-            const mailtoLink = `mailto:marco10ferreira18@gmail.com?subject=Contact Form Submission&body=${emailBody}`;
+            const mailtoLink = `mailto:marco10ferreira18@gmail.com?subject=${subject} marcoasf10.github.io&body=${emailBody}`;
             
             const iframe = document.createElement('iframe');
             iframe.style.display = 'none';
