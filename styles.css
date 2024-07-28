@@ -155,15 +155,8 @@ h1 {
     }
 
     .contacts-container {
-        align-items: center; /* Center container items horizontally on mobile */
+        flex-direction: column;
     }
-
-    .contact-item {
-        flex-direction: column; /* Stack icon and link vertically on mobile */
-        align-items: center; /* Center icon and link horizontally */
-        text-align: center; /* Center text */
-    }
-
 }
 
 .project_icon{
@@ -213,12 +206,12 @@ h1 {
     margin-left: 2%;
 }
 
-
-.contacts-container {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 10px; /* Space between each contact item */
+.contact-container {
+    background-color: #232323;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 60px; /* To offset the fixed navbar */
 }
 
 .contact-container h2 {
@@ -285,12 +278,6 @@ h1 {
     text-decoration: none;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1%;
-}
-
 .contacts-icon{
     display: inline-block;
     vertical-align: middle;
@@ -324,6 +311,8 @@ h1 {
 
 .contacts-container {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }

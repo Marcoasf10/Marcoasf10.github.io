@@ -60,7 +60,6 @@
             })
             .catch(error => console.error('Error fetching menu:', error));
 
-            // Load content based on the selected language
             const language = localStorage.getItem('language') || 'en'; 
             fetch(`${language}-content.html`)
                 .then(response => response.text())
