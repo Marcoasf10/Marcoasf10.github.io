@@ -128,7 +128,7 @@ h1 {
     }
 
     .profile_img {
-        margin-top: 20px; /* Add space between the heading and the image */
+        margin: 30px; /* Add space between the heading and the image */
     }
 
     h1 {
