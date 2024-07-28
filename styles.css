@@ -153,6 +153,9 @@ h1 {
     .project-img {
         border-radius: 15px;
     }
+    .contacts-container{
+        display: flex;
+    }
 }
 
 .project_icon{
@@ -303,4 +306,8 @@ h1 {
 
 .subtittle{
     margin-bottom: 0.5%;
+}
+
+.contacts-container{
+    text-align: center;
 }
