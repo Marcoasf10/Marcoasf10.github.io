@@ -132,24 +132,6 @@ h1 {
     }
 }
 
-@media (max-width: 576px) {
-    .profile_img {
-        max-height: 100px;
-        max-width: 100px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 1.2rem;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
 .project_icon{
     max-width: 100%;
     height: auto;
