@@ -316,3 +316,24 @@ h1 {
     text-align: center;
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
+
+.github-link {
+    font-size: 70%;
+}
+
+.github-button {
+    background: none;
+    border: 1px solid;
+    border-color: #191919;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.github-button:hover {
+    background: #555;
+    border: 1px solid;
+    border-color: #191919;
+    padding: 10px;
+    border-radius: 10px;
+}
