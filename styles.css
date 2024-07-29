@@ -379,7 +379,7 @@ h1 {
     transform: translateY(-50%);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1076px) {
     .button-text {
         display: none;
     }
