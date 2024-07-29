@@ -55,11 +55,11 @@ body {
     background: white;
     transition: background-color 0.3s ease;
 }
+
 .menu-icon:hover::before,
 .menu-icon:hover::after,
 .menu-icon:hover span {
     background: #878686;
-    height: 2px;
 }
 
 .menu {
@@ -90,6 +90,7 @@ body {
     transition: margin-top 0.3s ease;
     background-color: #232323;
 }
+
 .content p{
     margin-top: 2%;
 }
@@ -156,6 +157,18 @@ h1 {
 
     .contacts-container {
         flex-direction: column;
+    }
+
+    .button-text {
+        display: none;
+    }
+
+    .github-button {
+        padding: 10px 15px; /* Adjust padding as needed */
+    }
+
+    .button-container {
+        right: 10px; /* Adjust positioning as needed */
     }
 }
 
@@ -319,6 +332,10 @@ h1 {
 
 .github-link {
     font-size: 70%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .github-button {
@@ -328,12 +345,55 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
 }
 
 .github-button:hover {
     background: #555;
-    border: 1px solid;
-    border-color: #191919;
-    padding: 10px;
-    border-radius: 10px;
+}
+
+.button-text {
+    display: inline;
+    white-space: nowrap;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-title {
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    margin-right: -10%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 576px) {
+    .button-text {
+        display: none;
+    }
+
+    .github-button {
+        padding: 10px 15px;
+    }
+
+    .button-container {
+        right: 10px;
+    }
+
+    .title-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
